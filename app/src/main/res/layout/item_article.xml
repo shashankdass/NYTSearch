@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="sdass.nytimessearch.model.Article"/>
+        <variable name="article" type="Article" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_thumbnail"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/tv_headline"
+            android:maxLines="4"
+            android:textSize="20sp"
+            android:ellipsize="end"
+            android:layout_below="@+id/iv_thumbnail"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</layout>

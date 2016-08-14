@@ -1,0 +1,114 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Settings">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/begin_date"
+        android:id="@+id/tv_begin_date"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:padding="10dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/calendar"
+        android:maxHeight="10dp"
+        android:onClick="showDatePicker"
+        android:layout_alignBottom="@+id/tv_begin_date" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="_______________"
+        android:id="@+id/tv_date"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/datePicker"
+        android:layout_alignBottom="@+id/datePicker"
+        android:layout_alignLeft="@+id/spinner"
+        android:layout_alignStart="@+id/spinner"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/sort_value"
+        android:id="@+id/tv_sort_order"
+        android:layout_toLeftOf="@+id/tv_date"
+        android:layout_toStartOf="@+id/tv_date"
+        android:layout_toRightOf="@id/datePicker"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/spinner"
+        android:padding="10dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/news_desk_value"
+        android:id="@+id/tv_values"
+        android:layout_alignBaseline="@+id/sportsCheckBox"
+        android:layout_alignBottom="@+id/sportsCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="10dp"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:entries="@array/sort_order_values"
+        android:layout_below="@+id/datePicker"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="62dp"
+        android:layout_alignLeft="@+id/artsCheckBox"
+        android:layout_alignStart="@+id/artsCheckBox" />
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_arts"
+        android:id="@+id/artsCheckBox"
+        android:checked="false"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/sportsCheckBox"
+        android:layout_alignStart="@+id/sportsCheckBox"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_fashion"
+        android:id="@+id/fashionCheckBox"
+        android:layout_below="@+id/sportsCheckBox"
+        android:layout_alignLeft="@+id/sportsCheckBox"
+        android:layout_alignStart="@+id/sportsCheckBox"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_sports"
+        android:id="@+id/sportsCheckBox"
+        android:layout_below="@+id/artsCheckBox"
+        android:layout_toRightOf="@+id/tv_values"
+        android:layout_toEndOf="@+id/tv_values"
+        />
+
+
+</RelativeLayout>
+</layout>
