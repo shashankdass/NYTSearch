@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -42,6 +43,7 @@ import java.util.Map;
 import cz.msebera.android.httpclient.Header;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import sdass.nytimessearch.Decorators.SpacesItemDecoration;
 import sdass.nytimessearch.R;
 import sdass.nytimessearch.adapter.ArticleAdapter;
 import sdass.nytimessearch.collection.ArticleCollection;
@@ -74,6 +76,9 @@ public class SearchActivity extends AppCompatActivity implements SettingsFragmen
         StaggeredGridLayoutManager staggeredGridLayoutManager
                 = new StaggeredGridLayoutManager(3, OrientationHelper.VERTICAL);
         bindDataToAdapter(staggeredGridLayoutManager);
+        RecyclerView.ItemDecoration itemDecoration = new
+                SpacesItemDecoration(5);
+        results.addItemDecoration(itemDecoration);
         ItemClickSupport.addTo(results).setOnItemClickListener(
                 new ItemClickSupport.OnItemClickListener() {
                     @Override
