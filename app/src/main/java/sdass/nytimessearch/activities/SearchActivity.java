@@ -77,7 +77,7 @@ public class SearchActivity extends AppCompatActivity implements SettingsFragmen
 
         setSupportActionBar(toolbar);
         StaggeredGridLayoutManager staggeredGridLayoutManager
-                = new StaggeredGridLayoutManager(3, OrientationHelper.VERTICAL);
+                = new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL);
         bindDataToAdapter(staggeredGridLayoutManager);
         RecyclerView.ItemDecoration itemDecoration = new
                 SpacesItemDecoration(5);
