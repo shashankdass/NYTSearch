@@ -24,7 +24,7 @@
         android:id="@+id/datePicker"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/calendar"
+        android:src="@drawable/ic_event_black_24dp"
         android:maxHeight="10dp"
         android:onClick="showDatePicker"
         android:layout_alignBottom="@+id/tv_begin_date" />
