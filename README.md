@@ -43,6 +43,7 @@ The following **bonus** features are implemented:
 The following **additional** features are implemented:
 
 * Added Item Decorator for better spacing between articles. 
+* Added Animators to Recycler view items.
 
 ## Video Walkthrough
 

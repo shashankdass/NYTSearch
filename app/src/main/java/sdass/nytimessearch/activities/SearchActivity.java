@@ -41,6 +41,9 @@ import java.util.Iterator;
 import java.util.Map;
 
 import cz.msebera.android.httpclient.Header;
+import jp.wasabeef.recyclerview.animators.FadeInUpAnimator;
+import jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator;
+import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import sdass.nytimessearch.Decorators.SpacesItemDecoration;
@@ -79,6 +82,7 @@ public class SearchActivity extends AppCompatActivity implements SettingsFragmen
         RecyclerView.ItemDecoration itemDecoration = new
                 SpacesItemDecoration(5);
         results.addItemDecoration(itemDecoration);
+        results.setItemAnimator(new ScaleInBottomAnimator());
         ItemClickSupport.addTo(results).setOnItemClickListener(
                 new ItemClickSupport.OnItemClickListener() {
                     @Override
